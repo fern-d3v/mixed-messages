@@ -31,14 +31,16 @@ const radiantBond = {
                 "stormfather", 
                 "sibling"],
 
-    radiantOrder: ["bondsmith", 
-                   "truthwatcher", 
-                   "lightweaver", 
-                   "elsecaller", 
-                   "edgedancer", 
-                   "dustbringer", 
-                   "skybreaker", 
-                   "windrunner"],
+    radiantOrder: ["Windrunner",
+                   "Skybreaker",
+                   "Dustbringer",
+                   "Lightweaver",
+                   "Edgedancer",
+                   "Elsecaller",
+                   "Truthwatcher",
+                   "Willshaper",
+                   "Stoneward",
+                   "Bondsmith"],
 
     radiantOath: ['Life before death, Strength before weakness, Journey before destination']
 };
@@ -75,6 +77,6 @@ const formatRadiant = (radiant) => {
 // Call the formatRadiant function with the newRadiant array
 formatRadiant(newRadiant);
 
-console.log(chalk.blue(`
+console.log(chalk.blueBright(`
     <==|==========> <><><><><><><><><><><><><><> <==========|==>
     `));
