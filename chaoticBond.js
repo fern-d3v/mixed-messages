@@ -1,4 +1,8 @@
-console.log(`
+#!/usr/bin/env node
+import chalk from 'chalk';
+
+
+console.log(chalk.whiteBright(`
     ░██████  ░██                                 ░██    ░██              ░████████                                ░██ 
  ░██   ░██ ░██                                 ░██                     ░██    ░██                               ░██ 
 ░██        ░████████   ░██████    ░███████  ░████████ ░██ ░███████     ░██    ░██   ░███████  ░████████   ░████████ 
@@ -6,7 +10,7 @@ console.log(`
 ░██        ░██    ░██  ░███████  ░██    ░██    ░██    ░██░██           ░██     ░██ ░██    ░██ ░██    ░██ ░██    ░██ 
  ░██   ░██ ░██    ░██ ░██   ░██  ░██    ░██    ░██    ░██░██    ░██    ░██     ░██ ░██    ░██ ░██    ░██ ░██   ░███ 
     ░██████  ░██    ░██  ░█████░██  ░███████      ░████ ░██ ░███████     ░█████████   ░███████  ░██    ░██  ░█████░██ 
-`);
+`));
 
 const generateRandomNumber = (num) => {
     // Gets # from 0 -> num - 1
@@ -36,9 +40,7 @@ const radiantBond = {
                    "skybreaker", 
                    "windrunner"],
 
-    radiantOath: ['Life before death', 
-                   'Strength before weakness', 
-                   'Journey before destination']
+    radiantOath: ['Life before death, Strength before weakness, Journey before destination']
 };
 
 // Store newRadiant array
@@ -49,28 +51,30 @@ for (let prop in radiantBond) {
     let randomIndex = generateRandomNumber(radiantBond[prop].length);
     switch (prop) {
         case 'sprenType':
-            newRadiant.push(`You have bonded a "${radiantBond[prop][randomIndex]}".`);
+            newRadiant.push(`You have bonded a ${chalk.greenBright(`${radiantBond[prop][randomIndex]}`)}.`);
             break;
         case 'radiantOrder':
-            newRadiant.push(`This makes you a member of the "${radiantBond[prop][randomIndex]}" Order of Knights Radiant.`);
+            newRadiant.push(`This makes you a member of the ${chalk.cyanBright(`${radiantBond[prop][randomIndex]}`)} Order of Knights Radiant.`);
             break;
         case 'radiantOath':
-            newRadiant.push(`Speak the immortal words once forgotten by the tongues of men: "${radiantBond[prop][randomIndex]}".`);
+            newRadiant.push(`${chalk.magentaBright(`${radiantBond[prop][randomIndex]}`)}`);
             break;
         default:
             break;
     }
 };
 
-console.log("Retribution approaches...")
+console.log(chalk.yellowBright("Retribution approaches..."));
 
+// Format the radiant bond information for display
 const formatRadiant = (radiant) => {
     const formatted = radiant.join('\n');
     console.log(formatted);
 };
 
-formatRadiant( newRadiant);
+// Call the formatRadiant function with the newRadiant array
+formatRadiant(newRadiant);
 
-console.log(`
+console.log(chalk.blue(`
     <==|==========> <><><><><><><><><><><><><><> <==========|==>
-    `)
+    `));

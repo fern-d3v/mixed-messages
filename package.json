@@ -1,0 +1,23 @@
+{
+  "name": "chaotic-bond",
+  "version": "1.0.0",
+  "description": "randomly bond a spren, join a knight raidant order, and speak your first oath. Inspired by Brandon Sanderson's \"Stormlight Archive\" series.",
+  "homepage": "https://github.com/fern-d3v/mixed-messages#readme",
+  "bugs": {
+    "url": "https://github.com/fern-d3v/mixed-messages/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fern-d3v/mixed-messages.git"
+  },
+  "license": "MIT",
+  "author": "fern_d3v",
+  "type": "module",
+  "main": "chaoticBond.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "chalk": "^5.6.0"
+  }
+}
